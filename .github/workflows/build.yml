@@ -45,3 +45,7 @@ jobs:
           go mod tidy
           go build -v ./...
         working-directory: ./tutorials
+
+      - name: Test tutorials
+        run: go test -v ./...
+        working-directory: ./tutorials
