@@ -30,6 +30,11 @@ jobs:
       - name: Test
         run: go test ./...
 
+      - name: Install Go for examples and tutorials
+        uses: actions/setup-go@v5
+        with:
+          go-version: '^1'
+
       - name: Build examples
         run: |
           go mod tidy
